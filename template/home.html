@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce - Loja Online</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+        
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            backdrop-filter: blur(10px);
+        }
+
+        /* Glassmorphism Effect */
+        .glass {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+        }
+
+        .glass-dark {
+            background: rgba(0, 0, 0, 0.25);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Glassmorphism -->
+    <header class="glass sticky top-0 z-50 w-full border-b border-white/20">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-3xl font-bold text-white hover:text-blue-200 transition">🛍️ E-commerce</a>
+                <nav>
+                    <ul class="flex gap-8">
+                        <li><a href="#home" class="text-white hover:text-blue-200 transition font-medium">Início</a></li>
+                        <li><a href="#products" class="text-white hover:text-blue-200 transition font-medium">Produtos</a></li>
+                        <li><a href="#about" class="text-white hover:text-blue-200 transition font-medium">Sobre</a></li>
+                        <li><a href="#contact" class="text-white hover:text-blue-200 transition font-medium">Contato</a></li>
+                    </ul>
+                </nav>
+                <span class="text-white cursor-pointer hover:scale-110 transition text-xl font-semibold">🛒 (0)</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section with Glassmorphism -->
+    <section class="min-h-screen flex items-center justify-center pt-20 pb-20" id="home">
+        <div class="text-center max-w-4xl mx-auto px-6">
+            <h1 class="text-6xl md:text-7xl font-bold text-white mb-6 drop-shadow-lg">
+                Bem-vindo à Nossa Loja Online
+            </h1>
+            <p class="text-2xl text-white/90 mb-8 drop-shadow-lg">
+                Descubra os melhores produtos com os melhores preços
+            </p>
+            <button class="glass-card px-8 py-4 text-white font-bold rounded-xl hover:bg-white/20 transition transform hover:scale-105">
+                Começar as Compras
+            </button>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-6 pb-20">
+        <!-- Categories Section -->
+        <section class="mb-20">
+            <h2 class="text-4xl font-bold text-center text-white mb-12 drop-shadow-lg">Categorias em Destaque</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="glass-card p-6 rounded-2xl cursor-pointer hover:bg-white/20 transition transform hover:scale-105 text-center">
+                    <div class="text-6xl mb-4">👕</div>
+                    <h3 class="text-white font-bold text-lg">Moda</h3>
+                </div>
+                <div class="glass-card p-6 rounded-2xl cursor-pointer hover:bg-white/20 transition transform hover:scale-105 text-center">
+                    <div class="text-6xl mb-4">📱</div>
+                    <h3 class="text-white font-bold text-lg">Eletrônicos</h3>
+                </div>
+                <div class="glass-card p-6 rounded-2xl cursor-pointer hover:bg-white/20 transition transform hover:scale-105 text-center">
+                    <div class="text-6xl mb-4">🏠</div>
+                    <h3 class="text-white font-bold text-lg">Casa</h3>
+                </div>
+                <div class="glass-card p-6 rounded-2xl cursor-pointer hover:bg-white/20 transition transform hover:scale-105 text-center">
+                    <div class="text-6xl mb-4">⚽</div>
+                    <h3 class="text-white font-bold text-lg">Esportes</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section class="mb-20" id="products">
+            <h2 class="text-4xl font-bold text-center text-white mb-12 drop-shadow-lg">Produtos em Destaque</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Produto 1 -->
+                <div class="glass-card rounded-2xl overflow-hidden hover:bg-white/20 transition transform hover:scale-105">
+                    <div class="text-6xl h-48 flex items-center justify-center bg-white/10">👕</div>
+                    <div class="p-6">
+                        <h3 class="text-white font-bold text-lg mb-2">Camiseta Premium</h3>
+                        <p class="text-white/70 text-sm mb-3">Camiseta 100% algodão de alta qualidade</p>
+                        <div class="text-2xl text-blue-300 font-bold mb-2">R$ 79,90</div>
+                        <div class="text-yellow-300 text-sm mb-4">★★★★★ (128 avaliações)</div>
+                        <button class="w-full bg-gradient-to-r from-blue-400 to-blue-600 hover:from-blue-500 hover:to-blue-700 text-white font-bold py-2 px-4 rounded-lg transition">
+                            Adicionar ao Carrinho
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Produto 2 -->
+                <div class="glass-card rounded-2xl overflow-hidden hover:bg-white/20 transition transform hover:scale-105">
+                    <div class="text-6xl h-48 flex items-center justify-center bg-white/10">👟</div>
+                    <div class="p-6">
+                        <h3 class="text-white font-bold text-lg mb-2">Tênis Esportivo</h3>
+                        <p class="text-white/70 text-sm mb-3">Conforto e durabilidade para suas atividades</p>
+                        <div class="text-2xl text-blue-300 font-bold mb-2">R$ 259,90</div>
+                        <div class="text-yellow-300 text-sm mb-4">★★★★☆ (95 avaliações)</div>
+                        <button class="w-full bg-gradient-to-r from-blue-400 to-blue-600 hover:from-blue-500 hover:to-blue-700 text-white font-bold py-2 px-4 rounded-lg transition">
+                            Adicionar ao Carrinho
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Produto 3 -->
+                <div class="glass-card rounded-2xl overflow-hidden hover:bg-white/20 transition transform hover:scale-105">
+                    <div class="text-6xl h-48 flex items-center justify-center bg-white/10">🎧</div>
+                    <div class="p-6">
+                        <h3 class="text-white font-bold text-lg mb-2">Fones Bluetooth</h3>
+                        <p class="text-white/70 text-sm mb-3">Som cristalino com até 20h de bateria</p>
+                        <div class="text-2xl text-blue-300 font-bold mb-2">R$ 199,90</div>
+                        <div class="text-yellow-300 text-sm mb-4">★★★★★ (156 avaliações)</div>
+                        <button class="w-full bg-gradient-to-r from-blue-400 to-blue-600 hover:from-blue-500 hover:to-blue-700 text-white font-bold py-2 px-4 rounded-lg transition">
+                            Adicionar ao Carrinho
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Produto 4 -->
+                <div class="glass-card rounded-2xl overflow-hidden hover:bg-white/20 transition transform hover:scale-105">
+                    <div class="text-6xl h-48 flex items-center justify-center bg-white/10">⌚</div>
+                    <div class="p-6">
+                        <h3 class="text-white font-bold text-lg mb-2">Relógio Inteligente</h3>
+                        <p class="text-white/70 text-sm mb-3">Monitor de saúde com tela AMOLED</p>
+                        <div class="text-2xl text-blue-300 font-bold mb-2">R$ 449,90</div>
+                        <div class="text-yellow-300 text-sm mb-4">★★★★★ (87 avaliações)</div>
+                        <button class="w-full bg-gradient-to-r from-blue-400 to-blue-600 hover:from-blue-500 hover:to-blue-700 text-white font-bold py-2 px-4 rounded-lg transition">
+                            Adicionar ao Carrinho
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Produto 5 -->
+                <div class="glass-card rounded-2xl overflow-hidden hover:bg-white/20 transition transform hover:scale-105">
+                    <div class="text-6xl h-48 flex items-center justify-center bg-white/10">🎒</div>
+                    <div class="p-6">
+                        <h3 class="text-white font-bold text-lg mb-2">Mochila Executiva</h3>
+                        <p class="text-white/70 text-sm mb-3">Design moderno com compartimentos inteligentes</p>
+                        <div class="text-2xl text-blue-300 font-bold mb-2">R$ 129,90</div>
+                        <div class="text-yellow-300 text-sm mb-4">★★★★☆ (64 avaliações)</div>
+                        <button class="w-full bg-gradient-to-r from-blue-400 to-blue-600 hover:from-blue-500 hover:to-blue-700 text-white font-bold py-2 px-4 rounded-lg transition">
+                            Adicionar ao Carrinho
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Produto 6 -->
+                <div class="glass-card rounded-2xl overflow-hidden hover:bg-white/20 transition transform hover:scale-105">
+                    <div class="text-6xl h-48 flex items-center justify-center bg-white/10">💼</div>
+                    <div class="p-6">
+                        <h3 class="text-white font-bold text-lg mb-2">Maleta de Viagem</h3>
+                        <p class="text-white/70 text-sm mb-3">Resistente e com rodas 360º</p>
+                        <div class="text-2xl text-blue-300 font-bold mb-2">R$ 349,90</div>
+                        <div class="text-yellow-300 text-sm mb-4">★★★★★ (112 avaliações)</div>
+                        <button class="w-full bg-gradient-to-r from-blue-400 to-blue-600 hover:from-blue-500 hover:to-blue-700 text-white font-bold py-2 px-4 rounded-lg transition">
+                            Adicionar ao Carrinho
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="mb-20" id="about">
+            <h2 class="text-4xl font-bold text-center text-white mb-12 drop-shadow-lg">Por que Escolher a Gente?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="glass-card p-8 rounded-2xl text-center hover:bg-white/20 transition">
+                    <div class="text-5xl mb-4">🚚</div>
+                    <h3 class="text-white font-bold text-lg mb-2">Frete Grátis</h3>
+                    <p class="text-white/70">Frete grátis para compras acima de R$ 100</p>
+                </div>
+                <div class="glass-card p-8 rounded-2xl text-center hover:bg-white/20 transition">
+                    <div class="text-5xl mb-4">🔒</div>
+                    <h3 class="text-white font-bold text-lg mb-2">Segurança</h3>
+                    <p class="text-white/70">Suas compras 100% protegidas e seguras</p>
+                </div>
+                <div class="glass-card p-8 rounded-2xl text-center hover:bg-white/20 transition">
+                    <div class="text-5xl mb-4">💳</div>
+                    <h3 class="text-white font-bold text-lg mb-2">Múltiplos Pagamentos</h3>
+                    <p class="text-white/70">Pague como preferir: cartão, PIX ou boleto</p>
+                </div>
+                <div class="glass-card p-8 rounded-2xl text-center hover:bg-white/20 transition">
+                    <div class="text-5xl mb-4">↩️</div>
+                    <h3 class="text-white font-bold text-lg mb-2">Devoluções Fáceis</h3>
+                    <p class="text-white/70">30 dias para devolver sem perguntas</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="mb-20" id="contact">
+            <div class="glass-card p-12 rounded-3xl text-center">
+                <h2 class="text-3xl font-bold text-white mb-4">Receba Nossas Novidades</h2>
+                <p class="text-white/80 mb-8">Inscreva-se para receber descontos exclusivos e informações sobre novos produtos</p>
+                <form class="flex gap-3 max-w-md mx-auto flex-col sm:flex-row">
+                    <input type="email" placeholder="Seu e-mail" required class="flex-1 px-4 py-3 rounded-lg glass-dark text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                    <button type="submit" class="px-8 py-3 bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white font-bold rounded-lg transition">
+                        Inscrever-se
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer with Glassmorphism -->
+    <footer class="glass border-t border-white/20">
+        <div class="max-w-7xl mx-auto px-6 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-4">Sobre Nós</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-white/70 hover:text-blue-300 transition">Quem Somos</a></li>
+                        <li><a href="#" class="text-white/70 hover:text-blue-300 transition">Nossa História</a></li>
+                        <li><a href="#" class="text-white/70 hover:text-blue-300 transition">Carreiras</a></li>
+                        <li><a href="#" class="text-white/70 hover:text-blue-300 transition">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-4">Atendimento</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-white/70 hover:text-blue-300 transition">Contato</a></li>
+                        <li><a href="#" class="text-white/70 hover:text-blue-300 transition">FAQ</a></li>
+                        <li><a href="#" class="text-white/70 hover:text-blue-300 transition">Suporte</a></li>
+                        <li><a href="#" class="text-white/70 hover:text-blue-300 transition">Rastrear Pedido</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-4">Políticas</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-white/70 hover:text-blue-300 transition">Privacidade</a></li>
+                        <li><a href="#" class="text-white/70 hover:text-blue-300 transition">Termos de Uso</a></li>
+                        <li><a href="#" class="text-white/70 hover:text-blue-300 transition">Devoluções</a></li>
+                        <li><a href="#" class="text-white/70 hover:text-blue-300 transition">Segurança</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-4">Redes Sociais</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-white/70 hover:text-blue-300 transition">Facebook</a></li>
+                        <li><a href="#" class="text-white/70 hover:text-blue-300 transition">Instagram</a></li>
+                        <li><a href="#" class="text-white/70 hover:text-blue-300 transition">Twitter</a></li>
+                        <li><a href="#" class="text-white/70 hover:text-blue-300 transition">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/10 pt-8 text-center">
+                <p class="text-white/60">&copy; 2026 ShopXpress. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Adicionar interatividade ao carrinho
+        document.querySelectorAll('.add-to-cart-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const productTitle = this.parentElement.querySelector('h3').textContent;
+                alert(`${productTitle} adicionado ao carrinho!`);
+            });
+        });
+
+        // Submissão do newsletter
+        document.querySelector('.newsletter-form')?.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = this.querySelector('input[type="email"]').value;
+            alert(`Obrigado! E-mail ${email} inscrito com sucesso!`);
+            this.reset();
+        });
+
+        // Smooth scroll para links de navegação
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
